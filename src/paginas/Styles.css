@@ -1,0 +1,145 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+
+
+/* styles.css */
+.bg-custom-color {
+    background-color: #B3F5E1;
+  }
+  /*Styles-boton*/
+
+.btn-bg-boton {
+    text-align: center;
+    border-radius: 20px; /* Agrega la unidad de medida 'px' */
+    background-color: #814DE5;
+   
+  }
+  .text-custom-color {
+    color: #814DE5;
+  }
+  .logo-small {
+    width: 100px; /* Aproximadamente 5 cm */
+  height: auto;
+  }
+  .letra{
+    font-family: 'Libre Baskerville', serif;
+ 
+  }
+  .form_container{
+    width: 30%;
+  }
+  @media screen and (max-width:1000px){
+    .form_container{
+        width: 45%;
+    }
+  }
+  @media screen and(max-width: 700px) {
+    .form_container{
+        width: 65%;
+    }
+    
+  }
+  .borde-grueso {
+    border-width: 2%;
+    border-radius: 10px;
+    border-style: solid;
+    height: 50px; /* Ajusta esta altura según tus preferencias */
+    padding: 10px; /* Agrega relleno para mantener el contenido dentro del cuadro */
+  }
+  
+  
+  .formulario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  /* Estilos para los inputs dentro del formulario */
+  .formulario input {
+    border: 2px solid black;
+  }
+  
+  .date-picker-container {
+    position: relative;
+  }
+  
+  .date-picker-icon {
+    position: absolute;
+    top: 70%; /* Ajusta el valor para bajar el icono aún más */
+    transform: translateY(70%);
+    left: 180px; /* Ajusta la posición horizontal según tus necesidades */
+    z-index: 1;
+    font-size: 24px;
+    color: #5ca914; /* Cambia el color según tus preferencias */
+  }
+  .date-pickert-icono {
+    position: absolute;
+    top: 40%; /* Ajusta el valor para bajar el icono aún más */
+    transform: translateY(-30%);
+    left: 180px; /* Ajusta la posición horizontal según tus necesidades */
+    z-index: 1;
+    font-size: 24px;
+    color: #5ca914; /* Cambia el color según tus preferencias */
+  }
+/* Agrega estos estilos al archivo Styles.css */
+.btn-bg-boton-reg {
+  text-align: center;
+    border-radius: 10px; /* Agrega la unidad de medida 'px' */
+    background-color: #814DE5;
+ 
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  bottom: -160px; /* Ajusta la posición vertical según tus necesidades */
+  right:45%; /* Ajusta la posición horizontal según tus necesidades */
+}
+
+
+/* Añade estos estilos al archivo Styles.css */
+.contenedor-icono-label {
+  position: relative; /* Contenedor con posición relativa */
+  display: flex; /* Ajusta esto según tus necesidades de diseño */
+  align-items: center; /* Alinea verticalmente */
+}
+
+.archivo-icono {
+  position: absolute;
+  top: 10px; /* Ajusta la posición vertical según tus necesidades */
+  left: 50%; /* Ajusta la posición horizontal según tus necesidades */
+  transform: translateX(-10px); /* Ajusta la posición horizontal del icono */
+  font-size: 24px;
+  color: #5ca914;
+  z-index: 2; /* Asegura que el icono esté en la capa superior */
+}
+
+.file-upload-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 1000;
+  /* Agrega otros estilos según tu diseño */
+}
+.navbar {
+  background-color: #B3F5E1; /* Código de color para azul claro */
+}
+
+
+
+
+
+
+  
+  
+
+  
+ 

@@ -1,0 +1,126 @@
+/* Present.css */
+/* Estilos generales */
+.present-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: white;
+}
+
+.background-image {
+  background-image: url('./logo1.1.png');
+  background-size: cover;
+  width: 90%;
+  height: 90vh;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos de los botones */
+.centered-button,
+
+.centered-buttones,
+
+.centerednn-buttones {
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  padding: 10px 20px;
+  width: 190px;
+  height: 60px;
+  font-size: 19px;
+}
+
+.centered-button {
+  left: 50%;
+  transform: translate(-149%, 300%);
+}
+
+.centered-buttones {
+  left: 50%;
+  transform: translate(90%, 300%);
+}
+
+.enterede-buttones{
+  position: absolute;
+  top: 10px;
+  right: 30px; /* Alinea en la parte izquierda */
+  padding: 10px 20px;
+  width: 125px; /* Igualar al ancho de los botones de Registros */
+  height: 50px;
+  font-size: 13px;
+  background-color: #814DE5; /* Cambia el color de fondo según tu diseño */
+  border: none;
+  border-radius: 45px;
+  text-decoration: none;
+  color: white;
+  
+}
+
+
+
+/* Present.css */
+.centerednn-buttones {
+  background: beige;
+  position: absolute;
+  top: 10px; /* Alinea en la parte superior */
+  right: 100%; /* Alinea en el lado derecho */
+  padding: 10px 20px;
+  width: 190px;
+  height: 60px;
+  font-size: 19px;
+ 
+}
+.align-right {
+  text-align: center;
+}
+
+.navbar-nav li.nav-item:last-child {
+  
+  text-align: center;
+
+}
+.navbar-nav {
+  display: flex;
+  justify-content: space-between; /* Distribuye los elementos equitativamente */
+  align-items: center;
+}
+.nav-item:not(:last-child) {
+  margin-right: 20px; /* Margen derecho entre los botones (excepto el último) */
+}
+
+/* Present.css */
+.centered-button,
+.centered-buttones {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #814DE5; /* Cambia el color de fondo según tu diseño */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px; /* Agrega margen superior para separar los botones */
+}
+
+.centered-button .fa-user-plus,
+.centered-buttones .fa-user-plus {
+  margin-right: 10px;
+}
+
+.text-white {
+  color: white;
+}
+
+
+.centered-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
