@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Styles.css';
 import logo from './logo.png';
 import Swal from 'sweetalert2';
@@ -47,8 +47,7 @@ export const RegistroSesion = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (isFormValid) {
-      // Redirect to the "Inicio" page programmatically
-      window.location.href = '/Inicio';
+      setIsSubmitted(true); // Set this state to trigger redirection
       Swal.fire({
         icon: 'success',
         title: 'Registro Exitoso',
@@ -56,6 +55,7 @@ export const RegistroSesion = () => {
       });
     }
   };
+
   return (
     <div className='login template d-flex justify-content-center align-items-center vh-100 bg-custom-color'>
       <div className='form_container p-5 rounded bg-white'>
@@ -128,6 +128,12 @@ export const RegistroSesion = () => {
             </button>
           </div>
         </form>
+        {isSubmitted && (
+          <div>
+            <p>Te has registrado correctamente. ¡Redirigiendo a la página de inicio...</p>
+            <Link to="/">Ir a la página de inicio</Link>
+          </div>
+        )}
       </div>
     </div>
   );

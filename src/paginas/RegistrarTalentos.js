@@ -19,7 +19,21 @@ export const RegistrarTalentos = () => {
   const [status, setStatus] = useState('');
   const [correo, setCorreo] = useState('');
   const [isCorreoValid, setIsCorreoValid] = useState(true);
+  const [conocimiento, setConocimiento] = useState('');
+  const [preferencias, setPreferencias] = useState('');
+  const [rolesAplicados, setRolesAplicados] = useState('');
+  const [experiencia, setExperiencia] = useState('');
+  const [comentarios, setComentarios] = useState('');
+  const [instituto, setInstituto] = useState('');
+  const [cuatrimestre, setCuatrimestre] = useState('');
+  const [curriculum, setCurriculum] = useState('');
 
+  
+  
+  
+  
+  
+  
   const handleCorreoChange = (e) => {
     const newCorreo = e.target.value;
     setCorreo(newCorreo);
@@ -56,7 +70,6 @@ export const RegistrarTalentos = () => {
   const handleStatusChange = (e) => {
     setStatus(e.target.value);
   };
-  
   const handleRedirect = () => {
     if (!nombre || !telefono || !status) {
       Swal.fire({
@@ -65,23 +78,46 @@ export const RegistrarTalentos = () => {
         text: 'Por favor, completa los campos obligatorios: Nombre, Teléfono y Status.',
       });
     } else {
-      // console.log('Datos guardados:', {
-      //   nombre,
-      //   telefono,
-      //   status,
-     
-      // });
-      
-      // Redireccionar a la página DatosTalentos si los campos están completos
-      window.location.href = '/DatosTalentos';
-      // Mostrar la alerta de éxito después de redireccionar
-      Swal.fire({
-        icon: 'success',
-        title: 'Talento Creado con Éxito',
-        text: 'El talento se ha creado correctamente.',
-      });
+      const fieldsToCheck = [nombre, telefono, status, correo,conocimiento,preferencias,rolesAplicados,experiencia,comentarios,instituto,cuatrimestre,curriculum];
+      const areAllFieldsEmpty = fieldsToCheck.every(field => field === '');
+
+      if (areAllFieldsEmpty) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Campos incompletos',
+          text: 'Por favor, completa al menos un campo obligatorio.',
+        });
+      } else {
+        const filledFields = fieldsToCheck.map(field => (field === '' ? 'Vacio' : field));
+        //alert('Campos llenados: ' + filledFields.join(', '));
+
+        // Realiza la redirección y muestra la alerta de éxito después de redireccionar
+        window.location.href = '/DatosTalentos';
+        Swal.fire({
+          icon: 'success',
+          title: 'Talento Creado con Éxito',
+          text: 'El talento se ha creado correctamente.',
+        });
+
+        console.log('Datos guardados:', {
+          nombre,
+          telefono,
+          status,
+          correo,
+          conocimiento,
+          preferencias,
+          rolesAplicados,
+          experiencia,
+          comentarios,
+          instituto,
+          cuatrimestre,
+          curriculum,
+        });
+        
+      }
     }
   };
+  
   const isValidPhoneNumber = (phoneNumber) => {
     const phoneNumberRegex = /^[0-9]{10}$/; // Ejemplo de formato: 1234567890
     return phoneNumberRegex.test(phoneNumber);
